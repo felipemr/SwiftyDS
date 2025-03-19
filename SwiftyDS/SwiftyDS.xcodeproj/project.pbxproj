@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		B38279492D8B7B9600BFB881 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = B38279482D8B7B9600BFB881 /* MarkdownUI */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		B3BD8ED32CB6AA5D00C448A9 /* SwiftyDS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftyDS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -23,6 +27,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B38279492D8B7B9600BFB881 /* MarkdownUI in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -65,6 +70,7 @@
 			);
 			name = SwiftyDS;
 			packageProductDependencies = (
+				B38279482D8B7B9600BFB881 /* MarkdownUI */,
 			);
 			productName = SwiftyDS;
 			productReference = B3BD8ED32CB6AA5D00C448A9 /* SwiftyDS.app */;
@@ -94,6 +100,9 @@
 			);
 			mainGroup = B3BD8ECA2CB6AA5D00C448A9;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				B38279472D8B7B9600BFB881 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B3BD8ED42CB6AA5D00C448A9 /* Products */;
 			projectDirPath = "";
@@ -325,6 +334,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B38279472D8B7B9600BFB881 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.4.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B38279482D8B7B9600BFB881 /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B38279472D8B7B9600BFB881 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = B3BD8ECB2CB6AA5D00C448A9 /* Project object */;
 }

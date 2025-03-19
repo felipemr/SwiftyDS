@@ -5,6 +5,7 @@
 //  Created by Felipe Marques Ramos on 09/10/24.
 //
 
+import MarkdownUI
 import SwiftUI
 
 struct ContentView: View {
@@ -15,6 +16,9 @@ struct ContentView: View {
     var body: some View {
 		NavigationStack {
 			List {
+				NavigationLink("Test" ) {
+					ShowMarkdown()
+				}
 				Section("Algorithms") {
 					ForEach(algoList, id: \.self) { algo in
 						contentCell(algo)
@@ -33,6 +37,23 @@ struct ContentView: View {
 	func contentCell(_ title: String) -> some View {
 		NavigationLink(title) {
 			Text("Info about \(title)")
+		}
+	}
+}
+
+struct ShowMarkdown: View {
+	// Get the path to your markdown file.
+	
+	var text: String {
+		let filepath = Bundle.main.url(forResource: "filename", withExtension: "md")!
+		 return try! String(contentsOf: filepath)
+	}
+
+
+	var body: some View {
+		// Show the markdown.
+		ScrollView {
+			Markdown(text)
 		}
 	}
 }
