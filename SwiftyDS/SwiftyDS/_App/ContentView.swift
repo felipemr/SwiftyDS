@@ -10,18 +10,25 @@ import SwiftUI
 
 struct ContentView: View {
 	
-	let algoList = ["Big O Notation", "Search", "Sorting Algorithms", "Dynamic Programming", "Recursion", "Backtracking", "Greedy","Two Pointers", "Slinding Window", "Bit Manipulation", "Tortoise and the Hare"]
-	let dsList = ["Array", "Linked List", "Stack", "Queue", "Tree", "Graph", "Hash Table", "Trie", "Heap"]
+	let algoList = Algorithm.list
+	
+	let dsList = [
+		"Array",
+		"Linked List",
+		"Stack",
+		"Queue",
+		"Tree",
+		"Graph",
+		"Hash Table",
+		"Trie",
+		"Heap"]
 	
     var body: some View {
 		NavigationStack {
 			List {
-				NavigationLink("Test" ) {
-					ShowMarkdown()
-				}
 				Section("Algorithms") {
-					ForEach(algoList, id: \.self) { algo in
-						contentCell(algo)
+					ForEach(algoList) { algo in
+						algoCell(algo)
 					}
 				}
 				Section("Data Structures") {
@@ -39,24 +46,21 @@ struct ContentView: View {
 			Text("Info about \(title)")
 		}
 	}
-}
-
-struct ShowMarkdown: View {
-	// Get the path to your markdown file.
 	
-	var text: String {
-		let filepath = Bundle.main.url(forResource: "filename", withExtension: "md")!
-		 return try! String(contentsOf: filepath)
-	}
-
-
-	var body: some View {
-		// Show the markdown.
-		ScrollView {
-			Markdown(text)
-		}
+	@ViewBuilder
+	func algoCell(_ algo: Algorithm) -> some View {
+		NavigationLink(algo.name) {
+			if algo.enabled {
+				AlgorithmMarkdown(algorithm: algo)
+			} else {
+				Text("Info about \(algo.name) to be studied")
+			}
+		}.disabled(!algo.enabled)
+		
 	}
 }
+
+
 
 #Preview {
     ContentView()
