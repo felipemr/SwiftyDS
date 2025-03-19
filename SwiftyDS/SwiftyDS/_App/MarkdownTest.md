@@ -8,17 +8,17 @@ metadata: Hello World!
 #### Heading 4
 ##### Heading 5
 ###### Heading 6
+
 Norma Text
+
 *Italic Text*
+
 **Bold Text**
+
 ~~striketrhough~~
-<u> underline</u>
-footnote [^test]
-superscript <sup>abc</sup>  
-subscript<sub>abc</sub>
-[[Home|Linked Note]]
-[[Link Non-note]]
-[Simple URL](https://www.google.com)
+
+`Inline Code`
+
 <!--This is a comment line-->  
 
 
