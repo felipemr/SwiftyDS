@@ -37,7 +37,7 @@ struct Algorithm: Identifiable {
 // List of all Algorithm availables
 extension Algorithm {
 	static let list: [Algorithm] = [
-		.init("Big O Notation", fileName: "filename", enabled: true),
+		.init("Big O Notation", fileName: "BigO", enabled: true),
 		.init("Search", enabled: false),
 		.init("Sorting Algorithms", enabled: false),
 		.init("Dynamic Programming", enabled: false),
