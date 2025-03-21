@@ -10,6 +10,8 @@ import Foundation
 struct Algorithm: Identifiable {
 	var id = UUID()
 	var name: String
+	var coverImage: String = "BigO-Cover"
+	var emoji: String = "📈"
 	var enabled: Bool
 	private let fileName: String
 	private let fileExtension: String = "md"
@@ -26,8 +28,16 @@ struct Algorithm: Identifiable {
 		self.enabled = enabled
 	}
 	
-	var fileContents: String? {
-		if let filepath = Bundle.main.url(forResource: fileName, withExtension: fileExtension) {
+	var intro: String {
+		return fileContents("-Intro") ?? ""
+	}
+	
+	var more: String {
+		return fileContents("-More") ?? ""
+	}
+	
+	func fileContents(_ suffix: String) -> String? {
+		if let filepath = Bundle.main.url(forResource: fileName+suffix, withExtension: fileExtension) {
 			return try? String(contentsOf: filepath)
 		}
 		return nil

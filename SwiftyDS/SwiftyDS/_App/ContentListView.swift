@@ -54,7 +54,7 @@ struct ContentListView: View {
 			EmptyView()
 		} else {
 			NavigationLink(algo.name) {
-				AlgorithmMarkdown(algorithm: algo)
+				AlgorithmContentView(algorithm: algo)
 			}
 			.disabled(!algo.enabled)
 		}

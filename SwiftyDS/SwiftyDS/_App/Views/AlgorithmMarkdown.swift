@@ -12,20 +12,18 @@ struct AlgorithmMarkdown: View {
 	var algorithm: Algorithm
 	var body: some View {
 		ScrollView {
-			if let content = algorithm.fileContents {
-				Markdown(content)
-					.markdownTheme(.gitHub)
-					.markdownTextStyle(\.code) {
-					  FontFamilyVariant(.monospaced)
-					  FontSize(.em(0.85))
-					  ForegroundColor(.purple)
-					  BackgroundColor(.purple.opacity(0.25))
-					}
-			} else {
-				Text("Loading...")
-			}
+			Markdown(algorithm.more)
+				.markdownImageProvider(.asset)
+				.markdownCodeSyntaxHighlighter(SplashCodeSyntaxHighlighter(theme: .midnight(withFont: .init(size: 16))))
+				.markdownTheme(.gitHub)
+				.markdownTextStyle(\.code) {
+				  FontFamilyVariant(.monospaced)
+				  FontSize(.em(0.85))
+				  ForegroundColor(.purple)
+				  BackgroundColor(.purple.opacity(0.25))
+				}
+				.padding()
 		}
-		.padding()
 	}
 }
 

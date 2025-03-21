@@ -1,9 +1,3 @@
-## Intro
- First, WHY? Cause there is a secret handshake to enter the BIG companies, and ok, let's just learn it. Also, it helps a lot with problem-solving and programming in general.
-Good books about the topics:
-- [The Introduction to Algorithms](https://www.amazon.com/Introduction-Algorithms-fourth-Thomas-Cormen/dp/026204630X?sprefix=introduction,stripbooks,93&linkCode=sl1&linkId=83c55b2c018fbe94a1de79ebd447b66a&language=en_US)
-- [For Programmers Who Don't Know How To DataStructure and Would Like To Do Other Things Well Too](https://www.amazon.com/Common-Sense-Guide-Structures-Algorithms-Second/dp/1680507222?sprefix=introduction,stripbooks,93&linkCode=sl1&linkId=2000de29907b98b5ac7a98aa6b52c1d9&language=en_US)
-## Basics
 ### Time/Memory Complexity - Big O Notation
 It is a way to generalize the **O**rder of growth of your algorithm. It is not an exact measurement, but a way to categorize your algorithm based on how it scales over different inputs. It helps to make performance and structure decisions over your algorithm to create the best possible program. 
 
@@ -52,7 +46,7 @@ Here we could say the complecity is O(2N), however since it only matter the orde
 >Of course IRL this would matter a whole bunch! If you are comparing a O(1N) to a O(3N) algorithm, the first one will be a faster one. In some cases like if a N is very small a O(N^2) would be faster than a O(100N).
 
 #### Important Complexities
-![[Pasted image 20230825092639.png]]
+![Chart with graphs for each BigO](BigO-Chart)
 
 ##### O(1)
 

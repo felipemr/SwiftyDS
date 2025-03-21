@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		B38279492D8B7B9600BFB881 /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = B38279482D8B7B9600BFB881 /* MarkdownUI */; };
+		B3A266802D8CC36900578946 /* Splash in Frameworks */ = {isa = PBXBuildFile; productRef = B3A2667F2D8CC36900578946 /* Splash */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B38279492D8B7B9600BFB881 /* MarkdownUI in Frameworks */,
+				B3A266802D8CC36900578946 /* Splash in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -71,6 +73,7 @@
 			name = SwiftyDS;
 			packageProductDependencies = (
 				B38279482D8B7B9600BFB881 /* MarkdownUI */,
+				B3A2667F2D8CC36900578946 /* Splash */,
 			);
 			productName = SwiftyDS;
 			productReference = B3BD8ED32CB6AA5D00C448A9 /* SwiftyDS.app */;
@@ -102,6 +105,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				B38279472D8B7B9600BFB881 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+				B3A2667E2D8CC36900578946 /* XCRemoteSwiftPackageReference "Splash" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = B3BD8ED42CB6AA5D00C448A9 /* Products */;
@@ -344,6 +348,14 @@
 				minimumVersion = 2.4.1;
 			};
 		};
+		B3A2667E2D8CC36900578946 /* XCRemoteSwiftPackageReference "Splash" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JohnSundell/Splash";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.16.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -351,6 +363,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B38279472D8B7B9600BFB881 /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
 			productName = MarkdownUI;
+		};
+		B3A2667F2D8CC36900578946 /* Splash */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B3A2667E2D8CC36900578946 /* XCRemoteSwiftPackageReference "Splash" */;
+			productName = Splash;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
