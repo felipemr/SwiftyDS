@@ -89,16 +89,16 @@ class Queue<T> {
 }
 
 #Playground {
-    var queue = Queue<Int>()
-    
+    let queue = Queue<Int>()
+
     for i in 0...5 {
         queue.enqueue(i)
     }
-    print(queue.peek())
+    print(queue.peek()!)
     print(queue.count)
-    queue.deque()
+    _ = queue.deque()
     print(queue.count)
-    print(queue.peek())
+    print(queue.peek()!)
     print(queue.printList())
 
 

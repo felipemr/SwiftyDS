@@ -74,16 +74,16 @@ class Stack<T> {
 }
 
 #Playground {
-    var stack = Stack<Int>()
+    let stack = Stack<Int>()
 
     for i in 0...5 {
         stack.push(i)
     }
-    print(stack.peek())
+    print(stack.peek()!)
     print(stack.count)
-    stack.pop()
+    _ = stack.pop()
     print(stack.count)
-    print(stack.peek())
+    print(stack.peek()!)
     print(stack.printList())
 
 
